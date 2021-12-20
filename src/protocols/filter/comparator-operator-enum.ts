@@ -16,5 +16,5 @@ export enum ComparatorOperatorEnum {
   OP_AND = 'OP_AND',
   OP_NOT = 'OP_NOT',
   OP_NOR = 'OP_NOR',
-  OP_OR = 'OP_OR',
+  OP_OR = 'OP_OR'
 }

@@ -1,5 +1,5 @@
 export interface BaseEntity<T> {
-  id?: T
+  id: T
   ativo?: boolean
   dataInclusao?: Date
   dataAtualizacao?: Date

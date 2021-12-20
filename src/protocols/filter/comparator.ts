@@ -10,7 +10,7 @@ export class Comparator {
     private readonly _operator: ComparatorOperatorEnum,
     private readonly _key: string,
     private readonly _value: any | any[],
-    private readonly _options?: OptionsComparator,
+    private readonly _options?: OptionsComparator
   ) {}
 
   get operator(): ComparatorOperatorEnum {
@@ -48,7 +48,7 @@ export class Comparator {
     operator: ComparatorOperatorEnum,
     key: string,
     value: any | any[],
-    options?: OptionsComparator,
+    options?: OptionsComparator
   ): Comparator => {
     return new Comparator(operator, key, value, options)
   }
@@ -83,7 +83,7 @@ export class Comparator {
   static in = (
     key: string,
     value: any[],
-    options?: OptionsFilter,
+    options?: OptionsFilter
   ): Comparator =>
     Comparator.builder(ComparatorOperatorEnum.IN, key, value, options)
 
