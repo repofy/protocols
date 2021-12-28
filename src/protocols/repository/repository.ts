@@ -57,7 +57,7 @@ export interface Repository<U, T extends BaseEntity<U>> {
 
   updateMany(
     filter: Filter,
-    doc: Partial<T>[],
+    doc: Partial<T>,
     populate?: string | string[],
     includeAll?: boolean
   ): Promise<T[]>
