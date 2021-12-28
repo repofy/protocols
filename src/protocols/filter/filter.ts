@@ -14,7 +14,7 @@ export class Filter {
 
   private addCommand(
     comparator: Comparator | Comparator[],
-    operator: LogicalOperatorEnum,
+    operator: LogicalOperatorEnum
   ): void {
     this._command.push({ comparator, operator })
   }
