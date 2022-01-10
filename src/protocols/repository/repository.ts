@@ -2,6 +2,7 @@ import { ResultPaged } from './result-paged'
 import { BaseEntity } from './base-entity'
 import { Filter } from '../filter'
 import { Sort } from './sort'
+import { SelectField } from './select-field'
 
 export interface Repository<U, T extends BaseEntity<U>> {
   fieldId(): string
@@ -18,20 +19,23 @@ export interface Repository<U, T extends BaseEntity<U>> {
     filter?: Filter,
     populate?: string | string[],
     sort?: Sort | Sort[],
-    includeAll?: boolean,
-    limit?: number
+    select?: SelectField,
+    limit?: number,
+    includeAll?: boolean
   ): Promise<T[]>
 
   findOne(
     filter?: Filter,
     populate?: string | string[],
     sort?: Sort | Sort[],
+    select?: SelectField,
     includeAll?: boolean
   ): Promise<T>
 
   findById(
     id: U,
     populate?: string | string[],
+    select?: SelectField,
     includeAll?: boolean
   ): Promise<T>
 
@@ -41,6 +45,7 @@ export interface Repository<U, T extends BaseEntity<U>> {
     filter?: Filter,
     populate?: string | string[],
     sort?: Sort | Sort[],
+    select?: SelectField,
     includeAll?: boolean
   ): Promise<ResultPaged<T>>
 
